@@ -103,7 +103,7 @@
             var root = 'https://jsonplaceholder.typicode.com';
             var post_list = new Array();
             var user_list = new Array();
-            var current_set = 1;
+            var current_set = 100;
             
             // JQuery
             $(document).ready(function() {
@@ -130,7 +130,7 @@
                 function fetchManyPosts(postIds) {
                     console.log('Fetching many posts...');
                     var i;
-                    for (i = postIds.length - 1; i <= 0; i--) {
+                    for (i = 0; i < postIds.length; i++) {
                         fetchPost(postIds[i]);
                     }
                     console.log('Done!');
@@ -188,7 +188,7 @@
                 
                 function printAllPosts() {
                     var i;
-                    for (i = post_list.length - 1; i <= 0; i--) {
+                    for (i = 0; i < post_list.length; i++) {
                         printPost(post_list[i]);
                     }
                 }
@@ -201,7 +201,7 @@
                 
                 function matchPostToUser(post) {
                     var i;
-                    for (i = user_list.length - 1; i <= 0; i--)
+                    for (i = 0; i < user_list.length; i++)
                         if (user_list[i].id == post.userId)
                             return i;
                     return 0;
@@ -210,7 +210,7 @@
                 function getSequenceNumbers() {
                     var temp = new Array();
                     var i;
-                    for (i = 100; i >= 0; i -= 10) {
+                    for (i = 0; i < 100; i += 10) {
                         temp.push(current_set - i);
                     }
                     return temp;
@@ -219,7 +219,7 @@
                 // Handlers
                 $loadBtn.on('click', function() {
                     post_list = new Array();
-                    current_set -= 1;
+                    current_set += 1;
                     fetchManyPosts(getSequenceNumbers());
                     printAllWithTimeout();
                 });
