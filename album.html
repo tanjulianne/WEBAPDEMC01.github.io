@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap-3.3.7/docs/favicon.ico">
+
+    <title>Album List Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      
+    <!--Grid Load Gallery links-->
+    <link rel="stylesheet" type="text/css" href="css/photogrid/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/photogrid/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/photogrid/pater.css" />
+		<script>document.documentElement.className = 'js';</script>
+      
+    
+    
+    
+        
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Insert Logo Here</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="feed.html">Home</a></li>
+            <li class="active"><a href="profile.html">Profile</a></li>
+            <li><a href="archives.html">Archives</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+      <div class ="albumTitle"><h1><span id="title">Album Title<span></h1></div>
+      
+      <div class = "album-owner"><h4><a href="#" id="album-owner-link"><span id="owner">Giselle Nodalo</span></a></h4></div>
+<!--Album List Start-->
+      <div class="container">
+        <!--Unite Gallery-->
+          <div class = "album-gallery">
+            <div id = "ag-container">
+                <div id="album-container" class="grid grid--type-c">
+					<div class="grid__sizer"></div>
+					
+                    <!--image one-->
+                    
+                    <div class="grid__item">
+						<a class="grid__link lb-caption" href="#"><img class="grid__img" src="photos/set3/1.jpg" alt="Some image" />
+                        </a>
+					</div>    
+                    <!--image ends here-->
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/2.jpg" alt="Some image" /></a>
+					</div>
+					
+					<div class="grid__item">
+						<a class="grid__link" href="#"><img class="grid__img" src="photos/set3/3.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/4.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/5.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#"><img class="grid__img" src="photos/set3/6.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/10.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/11.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/7.jpg" alt="Some image" /></a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="#"><img class="grid__img" src="photos/set3/8.jpg" alt="Some image" /></a>
+					</div>
+					
+				</div>
+                  
+                
+              </div>
+             
+          </div>
+        <div class="more-photos">
+          Load more photos
+        </div>
+
+        <hr id="footer-border">
+
+      <footer class="footer">
+        <p>&copy; Blaise Cruz, Giselle Nodalo, Julianne Tan</p>
+      </footer>
+
+ <!-- Script for image layout --> 
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+      </div> <!-- /container -->
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap-3.3.7/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap-3.3.7/docs/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+            // Globals
+            var root = 'https://jsonplaceholder.typicode.com';
+            var current_set = 1;
+            var photos_list = new Array();
+            var album_data;
+            var user_data;
+            
+            // Functions
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
+            
+            // JQuery
+            $(document).ready(function() {
+                // Variables
+                var album_id = getUrlParameter('albumId');
+
+                if (album_id != null) {
+                  $('#album-container').empty();
+                  var gridSizer = document.createElement("div");
+                  $(gridSizer).addClass(".grid__sizer");
+                  $('#album-container').append(gridSizer);
+
+                  var $photodetails = $('#photodetails');     // Refers to the container for photo details
+                  
+                  function fetchAlbumData() {
+                      console.log('Fetching album data...');
+                      $.getJSON(root + '/albums/' + album_id, function(data) {
+                          album_data = data; 
+                      });
+                      console.log('Done!');
+                  }
+                  
+                  function printAlbumData() {
+                      $('#title').text(album_data.title);
+
+                      console.log('Fetching album data...');
+                      $.getJSON(root + '/users/' + album_data.userId, function(data) {
+                          user_data = data; 
+                          $('#owner').text(user_data.name);
+                          $('#album-owner-link').attr('href', "profile.html?id=" + user_data.id);
+                      });
+                      console.log('Done!');
+                  }
+                  
+                  function fetchPhotos() {
+                      console.log('Getching user photos...');
+                      $.getJSON(root + '/photos?albumId=' + album_id, function(data) {
+                          var i;
+                          for (i = 0; i < data.length; i++)
+                              photos_list.push(data[i]);
+                      });
+                      console.log('Done!');
+                  }
+                  
+                  function printPhoto(photo) {
+                      /**<div class="grid__item">
+                          <a class="grid__link" href="#" ><img class="grid__img" src="photos/set3/2.jpg" alt="Some image" /></a>
+                      </div>*/
+
+                      var gridItem = document.createElement("div");
+                      var gridLink = document.createElement("a");
+                      var img = $('<img class="grid__img">');
+
+                      img.attr('src', photo.thumbnailUrl);
+                      gridLink.setAttribute('href', "photo_view.html?photoId=" + photo.id);
+                      $(gridItem).addClass("grid__item");
+                      $(gridLink).addClass("grid__link");
+
+                      //gridLink.setAttribute('href', "profile.html?id=" + user.id);
+
+                      $(gridLink).append(img);
+                      $(gridItem).append(gridLink);
+
+                      $('#album-container').append(gridItem);
+
+
+                      //$photos.append('<a href="#" class="photo" id="' + photo.id + '"><img src="' + photo.thumbnailUrl + '"></a>');
+                  }
+                  
+                  function printAllPhotos() {
+                      var i;
+                      for (i = 0; i < photos_list.length; i++) {
+                          var photo = photos_list[i];
+                          printPhoto(photo);
+                          console.log(photo);
+                      }
+
+                      var container = document.querySelector('#album-container');
+                      var masonry = new Masonry(container, {
+                          columnWidth: '.grid__item',
+                          itemSelector: '.grid__item'
+                      });
+
+                  }
+                  
+                  function matchPhotoToId(ids) {
+                      var i;
+                      for (i = 0; i < photos_list.length; i++) {
+                          if (photos_list[i].id === ids) {
+                              //console.log('Found!')
+                              return photos_list[i];
+                          }
+                      }
+                      //console.log('Not found...');
+                      return 0;
+                  }
+                  
+                  function loadUserData() {
+                      console.log('Fetching user data...');
+                      $.getJSON(root + '/users/' + album_data.userId, function(data) {
+                          user_data = data;
+                      });
+                      console.log('Done!');
+                  }
+                  
+                  function printPhotoDetails(photo) {
+                      console.log(photo);
+                      $photodetails.empty();
+                      $photodetails.append(
+                          '<img src="' + photo.url + '">' +
+                          '<p>' +
+                          'Title: ' + photo.title + '<br />' + 
+                          'Album: ' + album_data.title + '<br />' +
+                          'By: <a href="' + 'user.html?id=' + user_data.id + '">' + user_data.name + '</a><br />' + 
+                          '</p>'
+                      );
+                  }
+                  
+                  function printAllWithTimeout() {
+                      setTimeout(function() {
+                          printAlbumData();
+                          printAllPhotos();
+                          loadUserData();
+                      }, 5000);
+                  }
+                  
+                  // Handlers
+                  $(document).on('click', 'a', function() {
+                      var sid = parseInt(this.id);
+                      var curphoto = matchPhotoToId(sid);
+                      printPhotoDetails(curphoto);
+                  });
+                  
+                  // Main
+                  fetchPhotos();
+                  fetchAlbumData();
+                  printAllWithTimeout();
+                }
+                
+            });
+        </script>
+  </body>
+</html>
