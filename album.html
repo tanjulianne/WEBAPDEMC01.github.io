@@ -59,9 +59,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="profile.html">Profile</a></li>
-            <li><a href="archives.html">Archives</a></li>
+            <li><a href="tanjulianne.github.io/index.html">Home</a></li>
+            <li class="tanjulianne.github.io/active"><a href="profile.html">Profile</a></li>
+            <li><a href="tanjulianne.github.io/archives.html">Archives</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -200,7 +200,7 @@
                       $.getJSON(root + '/users/' + album_data.userId, function(data) {
                           user_data = data; 
                           $('#owner').text(user_data.name);
-                          $('#album-owner-link').attr('href', "profile.html?id=" + user_data.id);
+                          $('#album-owner-link').attr('href', "tanjulianne.github.io/profile.html?id=" + user_data.id);
                       });
                       console.log('Done!');
                   }
@@ -225,7 +225,7 @@
                       var img = $('<img class="grid__img">');
 
                       img.attr('src', photo.thumbnailUrl);
-                      gridLink.setAttribute('href', "photo_view.html?photoId=" + photo.id);
+                      gridLink.setAttribute('href', "tanjulianne.github.io/photo_view.html?photoId=" + photo.id);
                       $(gridItem).addClass("grid__item");
                       $(gridLink).addClass("grid__link");
 
@@ -256,37 +256,12 @@
 
                   }
                   
-                  function matchPhotoToId(ids) {
-                      var i;
-                      for (i = 0; i < photos_list.length; i++) {
-                          if (photos_list[i].id === ids) {
-                              //console.log('Found!')
-                              return photos_list[i];
-                          }
-                      }
-                      //console.log('Not found...');
-                      return 0;
-                  }
-                  
                   function loadUserData() {
                       console.log('Fetching user data...');
                       $.getJSON(root + '/users/' + album_data.userId, function(data) {
                           user_data = data;
                       });
                       console.log('Done!');
-                  }
-                  
-                  function printPhotoDetails(photo) {
-                      console.log(photo);
-                      $photodetails.empty();
-                      $photodetails.append(
-                          '<img src="' + photo.url + '">' +
-                          '<p>' +
-                          'Title: ' + photo.title + '<br />' + 
-                          'Album: ' + album_data.title + '<br />' +
-                          'By: <a href="' + 'user.html?id=' + user_data.id + '">' + user_data.name + '</a><br />' + 
-                          '</p>'
-                      );
                   }
                   
                   function printAllWithTimeout() {
@@ -296,13 +271,6 @@
                           loadUserData();
                       }, 5000);
                   }
-                  
-                  // Handlers
-                  $(document).on('click', 'a', function() {
-                      var sid = parseInt(this.id);
-                      var curphoto = matchPhotoToId(sid);
-                      printPhotoDetails(curphoto);
-                  });
                   
                   // Main
                   fetchPhotos();

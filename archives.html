@@ -59,9 +59,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li class="active"><a href="#contact">Archives</a></li>
+            <li><a href="tanjulianne.github.io/index.html">Home</a></li>
+            <li><a href="tanjulianne.github.io/profile.html">Profile</a></li>
+            <li class="active"><a href="tanjulianne.github.io/archives.html">Archives</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -163,7 +163,7 @@
                     var img = $('<img>');
 
                     gridLink.setAttribute('id', photo.id);
-                    gridLink.setAttribute('href', "photo_view.html?photoId=" + photo.id);
+                    gridLink.setAttribute('href', "tanjulianne.github.io/photo_view.html?photoId=" + photo.id);
                     img.attr('src', photo.thumbnailUrl);
                     img.attr('class', "grid__img")
 
@@ -191,43 +191,6 @@
                     });
                 }
                 
-                function matchPhotoToId(ids) {
-                    var i;
-                    for (i = 0; i < photos_list.length; i++) {
-                        if (photos_list[i].id === ids) {
-                            //console.log('Found!')
-                            return photos_list[i];
-                        }
-                    }
-                    return 0;
-                }
-                
-                function matchPhotoToDetails(photo) {
-                    var i;
-                    for (i = 0; i < albums_list.length; i++)
-                        if (photo.albumId == albums_list[i].id)
-                            album_data = albums_list[i];
-                    console.log(album_data);
-                    for (i = 0; i < user_list.length; i++)
-                        if (album_data.userId == user_list[i].id)
-                            user_data = user_list[i];
-                    console.log(user_data);
-                }
-                
-                function printPhotoDetails(photo) {
-                    console.log(photo);
-                    $photodetails.empty();
-
-                    $photodetails.append(
-                        '<img src="' + photo.url + '">' +
-                        '<p>' +
-                        'Title: ' + photo.title + '<br />' + 
-                        'Album: <a href="' + 'album.html?albumId=' + album_data.id + '">' + album_data.title + '</a><br />' +
-                        'By: <a href="' + 'user.html?id=' + user_data.id + '">' + user_data.name + '</a><br />' + 
-                        '</p>'
-                    );
-                }
-                
                 function printAllWithTimeout() {
                     setTimeout(function() {
                         printSequence();
@@ -238,13 +201,6 @@
                 $loadMoreBtn.on('click', function() {
                     printSequence();
                     console.log(current_set);
-                });
-                
-                $(document).on('click', 'a', function() {
-                    var sid = parseInt(this.id);
-                    var curphoto = matchPhotoToId(sid);
-                    matchPhotoToDetails(curphoto);
-                    printPhotoDetails(curphoto);
                 });
                 
                 // Main

@@ -60,9 +60,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="profile.html">Profile</a></li>
-            <li><a href="#contact">Archives</a></li>
+            <li><a href="tanjulianne.github.io/index.html">Home</a></li>
+            <li class="active"><a href="tanjulianne.github.io/profile.html">Profile</a></li>
+            <li><a href="tanjulianne.github.io/archives.html">Archives</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -188,8 +188,8 @@
                   $('#owner').text(user_data.name);
                   $('#album').text(album_data.title);
 
-                  $('#owner-link').attr('href', "profile.html?id=" + user_data.id);
-                  $('#album-link').attr('href', "album.html?albumId=" + album_data.id);
+                  $('#owner-link').attr('href', "tanjulianne.github.io/profile.html?id=" + user_data.id);
+                  $('#album-link').attr('href', "tanjulianne.github.io/album.html?albumId=" + album_data.id);
 
 
                 }, 3000);
@@ -203,63 +203,5 @@
                 
             });
         </script>
-    <!--<script>
-      var root = 'https://jsonplaceholder.typicode.com';
-      var photo_list = new Array();
-      var photo_data;
-      var album_data;
-
-      var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-          sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-      }
-    };
-
-      $(document).ready(function() {
-                // Variables
-                var photo_id = getUrlParameter('photoId');
-
-                function fetchPhotoData() {
-                    console.log('Fetching photo data...');
-                    $.getJSON(root + '/photos/' + photo_id, function(data) {
-                        photo_data = data; 
-                    });
-                    console.log('Done!');
-
-                    if(photo_data != null) {
-                      console.log('hello');
-                    }
-                }
-
-                function fetchAlbumData() {
-                    console.log('Getting user photos...');
-                    $.getJSON(root + '/albums/' + photo_data.albumId, function(data) {
-                        album_data = data;
-                    });
-                    console.log('Done!');
-                }
-
-                function printPhoto() {
-                    $('title').text(photo_data.title);
-                    img.setAttribute('src', photo_data.url);
-                }
-
-
-                fetchPhotoData(photo_id);
-                fetchAlbumData();
-                printPhoto();
-
-      });
-           
-    </script>-->
   </body>
 </html>
