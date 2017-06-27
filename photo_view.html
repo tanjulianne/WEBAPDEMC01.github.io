@@ -173,16 +173,6 @@
 
                 setTimeout(function() {
                   console.log(photo_data.title + 'by' + user_data.name + 'from' + album_data.title);
-                  /**<div class = "album-gallery">
-                      <div id = "photo-container">
-                        <div id = "photo-space">
-                          <center><img id="img" src ="photos/set3/1.jpg" style = "width:400px; height: auto;"></center>
-                        </div>
-                          <h4><center><i><span id="title">Are we out of the woods?</span></i></center></h4>
-                          <h5><span id="owner">Julianne Tan</span></h5>
-                          <h5>Album: <span id="album">Searching</span></h5>              
-                      </div>
-                    </div>**/
                   $('#img').attr('src', photo_data.url);
                   $('#title').text(photo_data.title);
                   $('#owner').text(user_data.name);
